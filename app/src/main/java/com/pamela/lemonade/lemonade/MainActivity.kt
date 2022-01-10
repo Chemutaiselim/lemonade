@@ -110,11 +110,12 @@ class MainActivity : AppCompatActivity() {
             //  - The lemonSize variable needs to be set using the 'pick()' method in the LemonTree class
             //  - The squeezeCount should be 0 since we haven't squeezed any lemons just yet.
             SQUEEZE -> {
-                squeezeCount=+1
-                lemonSize=-1
-                lemonadeState = when(lemonSize){0-> DRINK
-                    else-> SQUEEZE
+                squeezeCount ++ 
+                lemonSize --
+                if (lemonSize==0){
+                    lemonadeState=DRINK
                 }
+                    
             }
 
             // TODO: When the image is clicked in the SQUEEZE state the squeezeCount needs to be
@@ -124,7 +125,7 @@ class MainActivity : AppCompatActivity() {
             DRINK -> {lemonadeState=RESTART
                 lemonSize=-1}
             // TODO: When the image is clicked in the DRINK state the state should become RESTART
-            RESTART -> {lemonadeState=SELECT}
+            else -> {lemonadeState=SELECT}
         }
         // TODO: When the image is clicked in the RESTART state the state should become SELECT
         setViewElements()
