@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.lemonade
+package com.pamela.lemonade
 
-import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.longClick
@@ -36,9 +35,9 @@ import org.junit.runner.RunWith
 class LemonadeTests : BaseTest() {
 
     @Before
-    fun setup() {
-        launchActivity<MainActivity>()
-    }
+    //  fun setup() {
+        //launchActivity<MainActivity>()
+    //}
 
     /**
      * Test the view components of the pick lemon state
