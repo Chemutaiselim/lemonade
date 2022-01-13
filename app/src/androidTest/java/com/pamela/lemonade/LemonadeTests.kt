@@ -23,9 +23,11 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
+import com.pamela.lemonade.lemonade.MainActivity
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import androidx.test.core.app.launchActivity as launchActivity1
 
 /**
  * Instrumentation tests to be run on a physical device or emulator.
@@ -35,9 +37,9 @@ import org.junit.runner.RunWith
 class LemonadeTests : BaseTest() {
 
     @Before
-    //  fun setup() {
-        //launchActivity<MainActivity>()
-    //}
+    fun setup() {
+        launchActivity1<MainActivity>()
+    }
 
     /**
      * Test the view components of the pick lemon state
